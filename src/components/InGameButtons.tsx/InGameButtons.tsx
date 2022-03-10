@@ -38,7 +38,7 @@ const InGameButtons: React.FC<{
         <Form onSubmit={handleSubmit}>
             <label>
                 <TextField id="standard-basic" label="points" variant="standard" color="primary"
-                           type="text" value={points} onChange={e => setPoints(e.target.value)}/>
+                           type="number" value={points} onChange={e => setPoints(e.target.value)}/>
             </label>
             <Button type="submit" value="Submit"> ok!</Button>
         </Form>
