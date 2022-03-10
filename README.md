@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Lelo darts
+
+A simple app to count the score in darts. Still in progress.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
