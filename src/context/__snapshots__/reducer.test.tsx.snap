@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducer tests ADD_PLAYER 1`] = `
+Object {
+  "currentPlayer": 0,
+  "gameState": 0,
+  "players": Array [
+    Object {
+      "name": "Player 1",
+      "points": 501,
+    },
+    Object {
+      "name": "Player 2",
+      "points": 501,
+    },
+    Object {
+      "name": "Player 3",
+      "points": 501,
+    },
+  ],
+}
+`;
+
+exports[`reducer tests SET_GAME_STATE 1`] = `
+Object {
+  "currentPlayer": 0,
+  "gameState": 2,
+  "players": Array [
+    Object {
+      "name": "Player 1",
+      "points": 501,
+    },
+    Object {
+      "name": "Player 2",
+      "points": 501,
+    },
+  ],
+}
+`;
+
+exports[`reducer tests SET_PLAYER_NAME 1`] = `
+Object {
+  "currentPlayer": 0,
+  "gameState": 0,
+  "players": Array [
+    Object {
+      "name": "Test Player",
+      "points": 501,
+    },
+    Object {
+      "name": "Player 2",
+      "points": 501,
+    },
+  ],
+}
+`;
+
+exports[`reducer tests SUBSTRACT_PLAYER_POINTS: 0 1`] = `
+Object {
+  "currentPlayer": 1,
+  "gameState": 0,
+  "players": Array [
+    Object {
+      "name": "Player 1",
+      "points": 500,
+    },
+    Object {
+      "name": "Player 2",
+      "points": 501,
+    },
+  ],
+}
+`;
+
+exports[`reducer tests SUBSTRACT_PLAYER_POINTS: Substract 1 point 1`] = `
+Object {
+  "currentPlayer": 1,
+  "gameState": 0,
+  "players": Array [
+    Object {
+      "name": "Player 1",
+      "points": 500,
+    },
+    Object {
+      "name": "Player 2",
+      "points": 501,
+    },
+  ],
+}
+`;

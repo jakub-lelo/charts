@@ -20,26 +20,26 @@ export interface AppAction {
     payload?: any
 }
 
-export const addPlayer = () => ({
+export const addPlayer = (): AppAction => ({
     type: ADD_PLAYER
 })
 
-export const removePlayer = (player: number) => ({
+export const removePlayer = (player: number): AppAction => ({
     type: REMOVE_PLAYER,
     payload: player
 })
 
-export const subtractPlayerPoints = (points: number) => ({
+export const subtractPlayerPoints = (points: number): AppAction => ({
     type: SUBTRACT_PLAYER_POINTS,
     payload: points
 })
 
-export const setGameState = (state: GameState) => ({
+export const setGameState = (state: GameState): AppAction => ({
     type: SET_GAME_STATE,
     payload: state
 })
 
-export const setPlayerName = (payload: { name: string, index: number }) => ({
+export const setPlayerName = (payload: { name: string, index: number }): AppAction => ({
     type: SET_PLAYER_NAME,
     payload,
 })
