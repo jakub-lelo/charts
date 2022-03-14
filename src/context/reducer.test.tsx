@@ -56,7 +56,6 @@ describe('reducer tests', () => {
 
     it('SUBSTRACT_PLAYER_POINTS: Game over', () => {
         const action = subtractPlayerPoints(10);
-        // kopiuje stan, a po przecinku nadbijuje konkretna wartosc
         const modifiedState = {...initialState};
         modifiedState.players[0].points = 10;
         const newState = appReducer(modifiedState, action);
