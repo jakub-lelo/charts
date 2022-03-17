@@ -1,5 +1,3 @@
-import React from 'react';
-
 import GlobalStyle from '../src/theme/GlobalStyles';
 import {ThemeProvider, createTheme} from '@mui/material/styles'
 import {AppContextProvider} from "./context/context";
@@ -19,7 +17,7 @@ function App() {
         <AppContextProvider>
             <GlobalStyle/>
             <ThemeProvider theme={theme}>
-                <Game></Game>
+                <Game/>
             </ThemeProvider>
         </AppContextProvider>
     )

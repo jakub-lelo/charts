@@ -17,7 +17,6 @@ interface Context {
 const store = createContext<Context>({state: initialState, dispatch: () => null});
 const {Provider} = store;
 
-
 export const AppContextProvider: React.FC =
     ({children}) => {
         const [state, dispatch] = useReducer(appReducer, initialState);

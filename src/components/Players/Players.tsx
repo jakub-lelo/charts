@@ -16,9 +16,10 @@ interface PlayersProps {
     players: Array<IPlayer>;
     gameState: GameState;
     setNewPlayerName?: (name: string, index: number) => void;
+    removeAPlayer?: (index: number) => void;
 }
 
-const Players: React.FC<PlayersProps> = ({currentPlayer, players, gameState, setNewPlayerName}) => {
+const Players: React.FC<PlayersProps> = ({currentPlayer, players, gameState, setNewPlayerName, removeAPlayer}) => {
 
     return (
         <PlayersStyled>
@@ -28,6 +29,7 @@ const Players: React.FC<PlayersProps> = ({currentPlayer, players, gameState, set
                         points={item.points}
                         gameState={gameState}
                         setNewPlayerName={setNewPlayerName}
+                        removeAPlayer={removeAPlayer}
                         index={index}
                         key={`player-${index}`}/>
             ))}

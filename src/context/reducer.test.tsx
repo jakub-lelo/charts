@@ -1,6 +1,6 @@
 import React from 'react';
 import {appReducer, initialState} from "./reducer";
-import {addPlayer, GameState, setGameState, setPlayerName, subtractPlayerPoints} from "./actions";
+import {addPlayer, GameState, removePlayer, setGameState, setPlayerName, subtractPlayerPoints} from "./actions";
 
 describe('reducer tests', () => {
     it('ADD_PLAYER', () => {
@@ -10,11 +10,13 @@ describe('reducer tests', () => {
         expect(newState).toMatchSnapshot();
     });
 
-    // tbd
-    // it('REMOVE_PLAYER', () => {
-    //     const action = removePlayer();
-    //     const newState = appReducer(initialState, action);
-    // });
+    it('REMOVE_PLAYER', () => {
+        const action = removePlayer(0);
+        const newState = appReducer(initialState, action);
+        expect(newState.players).toHaveLength(1);
+        expect(newState.players[0].name).toBe("Player 2");
+        expect(newState).toMatchSnapshot();
+    });
 
 
     it('SET_PLAYER_NAME', () => {

@@ -20,8 +20,9 @@ export const appReducer = (state: AppState, action: AppAction): AppState => {
 
         case "REMOVE_PLAYER":
 
-            // tbd remove player
-            return {...state}
+            const newPlayers = [...state.players];
+            newPlayers.splice(action.payload, 1);
+            return {...state, players: [...newPlayers]}
 
         case "SET_PLAYER_NAME":
 

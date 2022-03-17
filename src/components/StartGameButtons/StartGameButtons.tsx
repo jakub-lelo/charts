@@ -5,8 +5,7 @@ import styled from "styled-components"
 
 const ButtonsContainer = styled.div`
 padding-top:  50px;
-   `
-;
+   `;
 
 const StartGameButtons: React.FC<{
     startGame: () => void;
