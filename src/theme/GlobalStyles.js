@@ -11,7 +11,7 @@ src: url(${aller});
 * {
   font-size: 17px;
   font-family: aller, sans-serif;
-  overflow-x: hidden;
+    overflow: hidden;
   text-align: center;
 }
 
@@ -52,16 +52,16 @@ h3 {
 
   @media (max-width: 500px) {
   h1 {
-  font-size: 3rem;  
+  font-size: 2rem;  
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1rem;
   
 }
 
 h3 {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #a1a1a6;
 }
 }

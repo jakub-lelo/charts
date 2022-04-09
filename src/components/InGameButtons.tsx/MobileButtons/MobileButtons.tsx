@@ -6,7 +6,7 @@ const MobileButtonsContainer = styled.div`
 display:flex;
 flex-wrap: wrap;
 justify-content:center;
-margin-top: 50px;
+margin-bottom: 50px;
 `;
 
 
@@ -14,7 +14,7 @@ const MobileButtons: React.FC = () => {
 
     const [currentPoints, setCurrentPoints] = useState<string>("0");
 
-    const mobileButtons = ["1", "2", "3", "5", "8", "9", "clear", "0", "ok!"];
+    const mobileButtons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "clear", "0", "ok!"];
 
 
     return (

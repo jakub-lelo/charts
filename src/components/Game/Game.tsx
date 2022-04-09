@@ -17,7 +17,7 @@ background-color: ${({currentPlayer, gameState}) => gameState === GameState.star
 `
 
 const Game: React.FC = () => {
-    
+
     const {state: {gameState, currentPlayer}} = useAppContext();
 
     return (

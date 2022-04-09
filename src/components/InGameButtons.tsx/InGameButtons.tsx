@@ -10,7 +10,6 @@ padding-top:  50px;
    `
 ;
 
-
 const InGameButtons: React.FC<{
     setPlayerPoints: (points: number) => void;
 }> = ({setPlayerPoints}) => {
@@ -36,7 +35,8 @@ const InGameButtons: React.FC<{
 
     return (
         <Form onSubmit={handleSubmit}>
-            {window.innerWidth >= 500 && <>
+            {window.innerWidth >= 500 &&
+            <>
                 <label>
                     <TextField id="standard-basic" label="points" variant="standard" color="primary"
                                type="number" value={points} onChange={e => setPoints(e.target.value)}/>
