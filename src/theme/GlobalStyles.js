@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 import aller from '../assets/fonts/Aller_Rg.ttf';
 
 const GlobalStyles = createGlobalStyle`

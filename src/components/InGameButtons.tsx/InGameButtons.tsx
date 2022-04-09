@@ -1,21 +1,21 @@
 import React, {useState} from "react";
-import styled from "styled-components"
+import styled from "styled-components";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+
+import MobileButtons from "./MobileButtons/MobileButtons";
 
 const Form = styled.form`
 padding-top:  50px;
    `
 ;
 
+
 const InGameButtons: React.FC<{
     setPlayerPoints: (points: number) => void;
 }> = ({setPlayerPoints}) => {
 
     const [points, setPoints] = useState("");
-
-    // tbd add buttons for the mobile view
-    //const buttons = [1, 2, 3, 5, 8, 9, "-", "clear", "ok!"];
 
     const handleSubmit = (evt: { preventDefault: () => void; }) => {
         evt.preventDefault();
@@ -36,11 +36,17 @@ const InGameButtons: React.FC<{
 
     return (
         <Form onSubmit={handleSubmit}>
-            <label>
-                <TextField id="standard-basic" label="points" variant="standard" color="primary"
-                           type="number" value={points} onChange={e => setPoints(e.target.value)}/>
-            </label>
-            <Button type="submit" value="Submit"> ok!</Button>
+            {window.innerWidth >= 500 && <>
+                <label>
+                    <TextField id="standard-basic" label="points" variant="standard" color="primary"
+                               type="number" value={points} onChange={e => setPoints(e.target.value)}/>
+                </label>
+                <Button type="submit" value="Submit"> ok!</Button>
+            </>
+            }
+            {window.innerWidth < 500 &&
+            <MobileButtons> </MobileButtons>
+            }
         </Form>
     );
 };
