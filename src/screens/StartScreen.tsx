@@ -1,6 +1,6 @@
 import React, {useCallback} from "react";
 import {useAppContext} from "../context/context";
-import {setGameState, addPlayer, setPlayerName, GameState, removePlayer} from "../context/actions";
+import {setGameState, addPlayer, setPlayerName, setPlayerColor, GameState, removePlayer} from "../context/actions";
 import StartGameButtons from "../components/StartGameButtons/StartGameButtons";
 import Players from "../components/Players/Players";
 
@@ -20,11 +20,15 @@ const StartScreen: React.FC = () => {
     const setNewPlayerName = useCallback((name: string, index: number) => dispatch(setPlayerName({name, index}))
         , [dispatch]);
 
+    const setNewPlayerColor = useCallback((color: string, index: number) => dispatch(setPlayerColor({color, index}))
+        , [dispatch]);
+
     return (
         <>
 
             <Players players={players} gameState={gameState}
                      setNewPlayerName={setNewPlayerName}
+                     setNewPlayerColor={setNewPlayerColor}
                      currentPlayer={currentPlayer}
                      removeAPlayer={removeAPlayer}/>
 

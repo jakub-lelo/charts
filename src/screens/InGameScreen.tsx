@@ -1,7 +1,7 @@
 import React, {useCallback} from "react";
 import Players from "../components/Players/Players";
 import {useAppContext} from "../context/context";
-import InGameButtons from "../components/InGameButtons.tsx/InGameButtons";
+import InGameButtons from "../components/InGameButtons/InGameButtons";
 import {subtractPlayerPoints} from "../context/actions";
 
 const InGameScreen: React.FC = () => {

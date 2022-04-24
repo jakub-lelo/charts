@@ -7,19 +7,19 @@ const ButtonsContainer = styled.div`
   padding-top: 50px;
 `;
 
-const StartGameButtons: React.FC<{
+const ResultsButtons: React.FC<{
     startGame: () => void;
-    addNewPlayer: () => void;
-}> = ({startGame, addNewPlayer}) => {
+    endGame: () => void;
+}> = ({startGame, endGame}) => {
 
     return (
         <ButtonsContainer>
             <ButtonGroup variant="text" aria-label="outlined button group">
-                <Button onClick={addNewPlayer}> add player</Button>
-                <Button onClick={startGame}> start!</Button>
+                <Button onClick={startGame}> play again</Button>
+                <Button onClick={endGame}> new game</Button>
             </ButtonGroup>
         </ButtonsContainer>
     );
 };
 
-export default StartGameButtons;
+export default ResultsButtons;

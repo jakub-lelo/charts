@@ -1,6 +1,14 @@
 import React from 'react';
 import {appReducer, initialState} from "./reducer";
-import {addPlayer, GameState, removePlayer, setGameState, setPlayerName, subtractPlayerPoints} from "./actions";
+import {
+    addPlayer,
+    GameState,
+    removePlayer,
+    setGameState,
+    setPlayerColor,
+    setPlayerName,
+    subtractPlayerPoints
+} from "./actions";
 
 describe('reducer tests', () => {
     it('ADD_PLAYER', () => {
@@ -23,6 +31,13 @@ describe('reducer tests', () => {
         const action = setPlayerName({name: "Test Player", index: 0});
         const newState = appReducer(initialState, action);
         expect(newState.players[0].name).toMatch("Test Player");
+        expect(newState).toMatchSnapshot();
+    });
+
+    it('SET_PLAYER_COLOR', () => {
+        const action = setPlayerColor({color: "#000000", index: 0});
+        const newState = appReducer(initialState, action);
+        expect(newState.players[0].color).toMatch("#000000");
         expect(newState).toMatchSnapshot();
     });
 

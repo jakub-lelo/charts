@@ -6,14 +6,17 @@ Object {
   "gameState": 0,
   "players": Array [
     Object {
+      "color": "#cc3366",
       "name": "Player 1",
       "points": 501,
     },
     Object {
+      "color": "#006699",
       "name": "Player 2",
       "points": 501,
     },
     Object {
+      "color": "#339966",
       "name": "Player 3",
       "points": 501,
     },
@@ -27,6 +30,7 @@ Object {
   "gameState": 0,
   "players": Array [
     Object {
+      "color": "#006699",
       "name": "Player 2",
       "points": 501,
     },
@@ -40,10 +44,31 @@ Object {
   "gameState": 2,
   "players": Array [
     Object {
+      "color": "#cc3366",
       "name": "Player 1",
       "points": 501,
     },
     Object {
+      "color": "#006699",
+      "name": "Player 2",
+      "points": 501,
+    },
+  ],
+}
+`;
+
+exports[`reducer tests SET_PLAYER_COLOR 1`] = `
+Object {
+  "currentPlayer": 0,
+  "gameState": 0,
+  "players": Array [
+    Object {
+      "color": "#000000",
+      "name": "Player 1",
+      "points": 501,
+    },
+    Object {
+      "color": "#006699",
       "name": "Player 2",
       "points": 501,
     },
@@ -57,27 +82,12 @@ Object {
   "gameState": 0,
   "players": Array [
     Object {
+      "color": "#cc3366",
       "name": "Test Player",
       "points": 501,
     },
     Object {
-      "name": "Player 2",
-      "points": 501,
-    },
-  ],
-}
-`;
-
-exports[`reducer tests SUBSTRACT_PLAYER_POINTS: 0 1`] = `
-Object {
-  "currentPlayer": 1,
-  "gameState": 0,
-  "players": Array [
-    Object {
-      "name": "Player 1",
-      "points": 500,
-    },
-    Object {
+      "color": "#006699",
       "name": "Player 2",
       "points": 501,
     },
@@ -91,10 +101,12 @@ Object {
   "gameState": 0,
   "players": Array [
     Object {
+      "color": "#cc3366",
       "name": "Player 1",
       "points": 500,
     },
     Object {
+      "color": "#006699",
       "name": "Player 2",
       "points": 501,
     },

@@ -1,14 +1,8 @@
 import React, {useCallback} from 'react';
-import styled from "styled-components";
 import {subtractPlayerPoints} from "../../../../context/actions";
 import {useAppContext} from "../../../../context/context";
-
-const MobileButtonStyled = styled.button` 
-width: 25vw;
-height: 10vh;
-background-color: #fff;
-`;
-
+import Button from "@mui/material/Button";
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 const MobileButton: React.FC<{ value: string, currentPoints: string, setCurrentPoints: any }> =
     ({
@@ -23,14 +17,13 @@ const MobileButton: React.FC<{ value: string, currentPoints: string, setCurrentP
 
         const onClick = (value: {} | null | undefined, event: React.MouseEvent<HTMLButtonElement, MouseEvent>): any => {
             event.preventDefault();
-            console.log(value);
 
             if (value === "ok!") {
 
                 setPlayerPoints(parseInt(currentPoints));
                 setCurrentPoints("0");
 
-            } else if (value === "clear") {
+            } else if (value === "<-") {
                 setCurrentPoints("0");
             } else {
 
@@ -44,9 +37,16 @@ const MobileButton: React.FC<{ value: string, currentPoints: string, setCurrentP
 
         return (
             <>
-                <MobileButtonStyled onClick={(event) => onClick(value, event)}>
-                    {value}
-                </MobileButtonStyled>
+                <ButtonGroup>
+                    <Button style={{
+                        width: "25vw",
+                        height: "10vh",
+                        fontSize: "1.5rem"
+                    }} onClick={(event) => onClick(value, event)}>
+                        {value}
+                    </Button>
+                </ButtonGroup>
+
             </>
         )
     }

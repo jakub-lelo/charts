@@ -6,8 +6,16 @@ import Button from "@mui/material/Button";
 import MobileButtons from "./MobileButtons/MobileButtons";
 
 const Form = styled.form`
-padding-top:  50px;
-   `
+          padding-top: 50px;
+          display: flex;
+          flex-grow: 1;
+          flex-direction: column;
+
+          @media (min-width: 501px) {
+            flex-direction: row;
+            justify-content: center;
+          }
+    `
 ;
 
 const InGameButtons: React.FC<{
